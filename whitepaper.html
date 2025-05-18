@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Vibes Token Whitepaper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .whitepaper-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: var(--gray-300);
+        }
+
+        .whitepaper-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .whitepaper-container h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--primary-light);
+            border-bottom: 1px solid rgba(108, 99, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .whitepaper-container h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: white;
+        }
+
+        .whitepaper-container p, .whitepaper-container ul, .whitepaper-container ol {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .whitepaper-container ul, .whitepaper-container ol {
+            padding-left: 20px;
+        }
+
+        .whitepaper-container li {
+            margin-bottom: 10px;
+        }
+
+        .whitepaper-container strong {
+            color: white;
+        }
+
+        .whitepaper-container .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .whitepaper-container .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+        }
+
+        .whitepaper-container .version {
+            font-style: italic;
+            color: var(--gray-500);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .whitepaper-container .abstract {
+            font-style: italic;
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+
+        .whitepaper-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .whitepaper-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: rgba(45, 55, 72, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .whitepaper-container th, .whitepaper-container td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .whitepaper-container th {
+            background-color: rgba(108, 99, 255, 0.2);
+            color: white;
+            font-weight: 600;
+        }
+
+        .whitepaper-container tr:last-child td {
+            border-bottom: none;
+        }
+
+        .whitepaper-container tr:hover td {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .toc {
+            background-color: rgba(45, 55, 72, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .toc ul ul {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/g-vibes-logo-fixed.svg" alt="G-Vibes Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#tokenomics">Tokenomics</a></li>
+                    <li><a href="index.html#roadmap">Roadmap</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <button type="button" class="connect-wallet-btn">Connect Wallet</button>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Whitepaper Content -->
+    <div class="whitepaper-container">
+        <h1>G-Vibes Token Whitepaper</h1>
+        <p class="version">Version 1.0 - November 2023</p>
+
+        <div class="abstract">
+            <p>This whitepaper introduces G-Vibes, a revolutionary blockchain-based platform designed to transform the creator economy. By leveraging blockchain technology, G-Vibes aims to create a more equitable ecosystem where content creators receive fair compensation for their work, maintain ownership of their content, and build direct relationships with their audiences without intermediaries taking excessive fees.</p>
+        </div>
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#introduction">1. Introduction</a></li>
+                <li><a href="#problem">2. Problem Statement</a></li>
+                <li><a href="#solution">3. The G-Vibes Solution</a></li>
+                <li><a href="#token">4. G-Vibes Token (GVIBE)</a></li>
+                <li><a href="#technology">5. Technology Stack</a></li>
+                <li><a href="#roadmap">6. Roadmap</a></li>
+                <li><a href="#team">7. Team</a></li>
+                <li><a href="#conclusion">8. Conclusion</a></li>
+            </ul>
+        </div>
+
+        <h2 id="introduction">1. Introduction</h2>
+        <p>The creator economy has experienced explosive growth in recent years, with millions of individuals worldwide generating content across various platforms. However, the current ecosystem is plagued by significant challenges, including unfair revenue distribution, lack of content ownership, and opaque algorithms that control creator visibility.</p>
+
+        <p>G-Vibes is built on the principle that creators should be fairly compensated for their work, maintain ownership of their content, and have direct relationships with their audiences. By leveraging blockchain technology, G-Vibes creates a transparent, decentralized platform that empowers creators and provides audiences with authentic content.</p>
+
+        <h2 id="problem">2. Problem Statement</h2>
+        <h3>2.1 Unfair Revenue Distribution</h3>
+        <p>Traditional social media platforms typically take 30-70% of revenue generated by creators. This disproportionate split leaves creators undercompensated for their work, especially considering they are the primary value generators on these platforms.</p>
+
+        <h3>2.2 Lack of Content Ownership</h3>
+        <p>Creators often surrender rights to their content when posting on mainstream platforms. This limits their ability to monetize across channels and leaves them vulnerable to platform policy changes or account terminations.</p>
+
+        <h3>2.3 Algorithmic Opacity</h3>
+        <p>Content distribution on major platforms is controlled by proprietary algorithms that lack transparency. Creators have little insight into how their content is promoted or suppressed, making it difficult to build sustainable strategies.</p>
+
+        <h3>2.4 Centralized Control</h3>
+        <p>Centralized platforms can unilaterally change terms, demonetize content, or ban creators without recourse. This power imbalance creates significant uncertainty for those building careers on these platforms.</p>
+
+        <h2 id="solution">3. The G-Vibes Solution</h2>
+        <p>G-Vibes addresses these challenges through a decentralized platform built on blockchain technology, offering:</p>
+
+        <h3>3.1 Creator-First Revenue Model</h3>
+        <p>G-Vibes implements a 90/10 revenue split, with 90% going directly to creators. This represents a significant improvement over traditional platforms and ensures creators are fairly compensated for their contributions.</p>
+
+        <h3>3.2 Content Ownership via NFTs</h3>
+        <p>Creators maintain full ownership of their content through NFT integration. This allows them to prove authenticity, prevent unauthorized use, and monetize their work across multiple channels while maintaining provenance.</p>
+
+        <h3>3.3 Transparent Algorithm</h3>
+        <p>G-Vibes utilizes an open-source recommendation algorithm that prioritizes genuine engagement over paid promotion. This transparency allows creators to understand how their content is distributed and build more effective strategies.</p>
+
+        <h3>3.4 Decentralized Governance</h3>
+        <p>Platform policies and feature development are determined through community voting, with GVIBE token holders having proportional influence. This ensures the platform evolves according to the needs of its community rather than corporate interests.</p>
+
+        <h2 id="token">4. G-Vibes Token (GVIBE)</h2>
+        <p>The G-Vibes Token (GVIBE) is the native utility token of the G-Vibes ecosystem, designed to facilitate transactions, incentivize participation, and enable governance.</p>
+
+        <h3>4.1 Token Utility</h3>
+        <p>GVIBE tokens serve multiple functions within the ecosystem:</p>
+        <ul>
+            <li><strong>Platform Access:</strong> Premium features and content require GVIBE tokens</li>
+            <li><strong>Creator Support:</strong> Fans can use GVIBE to tip creators or subscribe to exclusive content</li>
+            <li><strong>Governance Voting:</strong> Token holders can vote on platform development and policies</li>
+            <li><strong>Staking Rewards:</strong> Users can stake GVIBE to earn passive income</li>
+            <li><strong>NFT Marketplace:</strong> GVIBE is used for buying and selling creator content as NFTs</li>
+            <li><strong>Advertising:</strong> Businesses use GVIBE for non-intrusive, targeted advertising</li>
+        </ul>
+
+        <h3>4.2 Tokenomics</h3>
+        <p>The G-Vibes token has been designed with a sustainable economic model to support long-term growth:</p>
+
+        <table>
+            <tr>
+                <th>Total Supply</th>
+                <td>1,000,000,000 GVIBE</td>
+            </tr>
+            <tr>
+                <th>Token Type</th>
+                <td>ERC-20 on Polygon Network</td>
+            </tr>
+            <tr>
+                <th>Initial Price</th>
+                <td>$0.015 USD (Presale)</td>
+            </tr>
+            <tr>
+                <th>Listing Price</th>
+                <td>$0.025 USD (Estimated)</td>
+            </tr>
+        </table>
+
+        <h3>4.3 Token Distribution</h3>
+        <p>The total supply of 1 billion GVIBE tokens will be distributed as follows:</p>
+        <ul>
+            <li><strong>Community & Ecosystem (40%):</strong> Rewards, airdrops, and ecosystem growth initiatives</li>
+            <li><strong>Team & Advisors (20%):</strong> 3-year vesting schedule with 6-month cliff</li>
+            <li><strong>Token Sale (15%):</strong> Presale and public sale allocations</li>
+            <li><strong>Platform Development (15%):</strong> Ongoing development and operational expenses</li>
+            <li><strong>Liquidity & Partnerships (10%):</strong> Exchange listings and strategic partnerships</li>
+        </ul>
+
+        <h3>4.4 Vesting Schedule</h3>
+        <p>To ensure long-term alignment of interests and prevent market disruption:</p>
+        <ul>
+            <li><strong>Presale Participants:</strong> 20% at TGE, 80% linearly vested over 6 months</li>
+            <li><strong>Team & Advisors:</strong> 6-month cliff, then linear vesting over 30 months</li>
+            <li><strong>Platform Development:</strong> 10% at TGE, remainder vested quarterly over 2 years</li>
+            <li><strong>Community & Ecosystem:</strong> Released according to platform milestones and growth</li>
+        </ul>
+
+        <h3>4.5 Token Burning Mechanism</h3>
+        <p>G-Vibes implements a deflationary mechanism where 2% of all transaction fees are automatically burned, reducing the circulating supply over time and potentially increasing token value. Quarterly burn events will also be conducted based on platform revenue.</p>
+
+        <h2 id="technology">5. Technology Stack</h2>
+        <p>G-Vibes is built on a robust technology stack designed for scalability, security, and performance:</p>
+
+        <h3>5.1 Blockchain Infrastructure</h3>
+        <p>The G-Vibes platform is built on the Polygon network, chosen for its:</p>
+        <ul>
+            <li>Low transaction fees</li>
+            <li>High throughput (up to 7,000 TPS)</li>
+            <li>Ethereum compatibility</li>
+            <li>Carbon-neutral operations</li>
+            <li>Robust security model</li>
+        </ul>
+
+        <h3>5.2 Smart Contracts</h3>
+        <p>G-Vibes utilizes several smart contracts to power its ecosystem:</p>
+        <ul>
+            <li><strong>GVIBE Token Contract:</strong> ERC-20 implementation with burning mechanism</li>
+            <li><strong>Creator Economy Contract:</strong> Manages revenue distribution and creator payments</li>
+            <li><strong>Governance Contract:</strong> Handles proposal submission and voting</li>
+            <li><strong>Staking Contract:</strong> Manages token staking and reward distribution</li>
+            <li><strong>NFT Marketplace Contract:</strong> Facilitates the creation and trading of content NFTs</li>
+        </ul>
+        <p>All smart contracts undergo rigorous security audits by reputable firms to ensure they are secure and function as intended.</p>
+
+        <h3>5.3 Content Storage</h3>
+        <p>Content on G-Vibes is stored using a hybrid approach:</p>
+        <ul>
+            <li><strong>IPFS:</strong> Decentralized storage for content metadata and smaller files</li>
+            <li><strong>Arweave:</strong> Permanent storage for important creator content</li>
+            <li><strong>Optimized CDN:</strong> For efficient delivery of high-bandwidth content</li>
+        </ul>
+        <p>This approach balances decentralization with performance, ensuring content remains accessible while providing a smooth user experience.</p>
+
+        <h2 id="roadmap">6. Roadmap</h2>
+        <p>The G-Vibes development roadmap is divided into four phases:</p>
+
+        <h3>6.1 Phase 1: Foundation (Q4 2023 - Q1 2024)</h3>
+        <ul>
+            <li>Token presale and initial DEX offering</li>
+            <li>Smart contract development and auditing</li>
+            <li>Core team expansion</li>
+            <li>Community building initiatives</li>
+            <li>Alpha platform development</li>
+        </ul>
+
+        <h3>6.2 Phase 2: Launch (Q2 2024)</h3>
+        <ul>
+            <li>Beta platform launch</li>
+            <li>Creator onboarding program</li>
+            <li>Initial NFT marketplace implementation</li>
+            <li>Mobile app development</li>
+            <li>Strategic partnerships with creators and brands</li>
+        </ul>
+
+        <h3>6.3 Phase 3: Growth (Q3-Q4 2024)</h3>
+        <ul>
+            <li>Full platform launch</li>
+            <li>Governance system activation</li>
+            <li>Advanced creator tools</li>
+            <li>Mobile app release</li>
+            <li>Major marketing campaigns</li>
+            <li>Expansion of creator ecosystem</li>
+        </ul>
+
+        <h3>6.4 Phase 4: Expansion (2025 and beyond)</h3>
+        <ul>
+            <li>Advanced AI-driven content recommendation</li>
+            <li>Cross-platform integration</li>
+            <li>Expanded monetization options</li>
+            <li>International market expansion</li>
+            <li>Enterprise solutions for brands and agencies</li>
+        </ul>
+
+        <h2 id="team">7. Team</h2>
+        <p>The G-Vibes project is developed by a decentralized team of blockchain experts, platform developers, and creator economy specialists. While the team remains anonymous to emphasize the decentralized nature of the project, we are committed to transparency in development, governance, and financial operations.</p>
+
+        <p>The team's anonymity does not affect our commitment to the project's success. All development activities are conducted transparently, with regular updates provided through our official channels. The project's code is open-source, allowing community verification and contribution.</p>
+
+        <h2 id="conclusion">8. Conclusion</h2>
+        <p>G-Vibes represents a paradigm shift in the creator economy, leveraging blockchain technology to create a more equitable, transparent, and creator-centric ecosystem. By addressing the fundamental challenges of today's platforms—unfair revenue distribution, lack of content ownership, algorithmic opacity, and centralized control—G-Vibes empowers creators to build sustainable careers while providing audiences with authentic content.</p>
+
+        <p>The GVIBE token is central to this ecosystem, facilitating transactions, enabling governance, and aligning the interests of all participants. With a clear roadmap, robust technology stack, and commitment to transparency, G-Vibes is positioned to transform the creator economy for the benefit of creators and audiences alike.</p>
+
+        <p>We invite creators, fans, and investors to join us in building this new ecosystem that values creativity, authenticity, and fair compensation.</p>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/g-vibes-logo-fixed.svg" alt="G-Vibes Logo">
+                    <p>The future of creator economy powered by blockchain technology.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/g_vibes_token" target="_blank" rel="noopener" title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://t.me/gvibestoken" target="_blank" rel="noopener" title="Join our Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://discord.gg/g-vibes" target="_blank" rel="noopener" title="Join our Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://medium.com/@g-vibes" target="_blank" rel="noopener" title="Read our Medium blog"><i class="fab fa-medium"></i></a>
+                    </div>
+                    <div class="transparency-note">
+                        <h4>Transparency & Security</h4>
+                        <p>G-Vibes is committed to full transparency in all operations. Our smart contracts are open source, audited, and all transactions are verifiable on-chain.</p>
+                        <div class="transparency-links">
+                            <a href="https://github.com/g-vibes-dev" target="_blank" rel="noopener" class="transparency-link">GitHub Repository</a>
+                            <a href="https://etherscan.io/address/0x123...789" target="_blank" rel="noopener" class="transparency-link">Contract Address</a>
+                            <a href="https://certik.com/projects/g-vibes" target="_blank" rel="noopener" class="transparency-link">Security Audit</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#tokenomics">Tokenomics</a></li>
+                            <li><a href="index.html#roadmap">Roadmap</a></li>
+                            <li><a href="index.html#team">Team</a></li>
+                            <li><a href="index.html#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="disclaimer.html">Risk Disclaimer</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:info@gvibestoken.com">info@gvibestoken.com</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Partnerships</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 G-Vibes Token. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
