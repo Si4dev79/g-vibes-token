@@ -147,13 +147,13 @@ header .container {
 /* Fallback for browsers with SVG animation issues */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .logo img[src*="g-vibes-logo-fixed.svg"] {
-        content: url('g-vibes-logo-fixed.svg');
+        content: url('g-vibes-logo-simple.svg');
     }
 }
 
 @supports not (animation-name: pulse) {
     .logo img[src*="g-vibes-logo-fixed.svg"] {
-        content: url('g-vibes-logo-fixed.svg');
+        content: url('g-vibes-logo-simple.svg');
     }
 }
 
